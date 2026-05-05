@@ -73,7 +73,7 @@ const instrumentMaster = [
     // 不要な楽器は行の頭に // を付けるだけで、画面からも音源からも消えます。楽器名は適宜修正してください。
     { id: "ba",  name: "🎸 ベース",             file: "Ba.mp3",  defaultVol: 1.0 },
     { id: "gt1", name: "🎸 ギター1",       file: "Gt1.mp3", defaultVol: 1.0 },
-    { id: "gt2", name: "🎸 ギター2",             file: "Gt2.mp3", defaultVol: 1.0 },
+    //{ id: "gt2", name: "🎸 ギター2",             file: "Gt2.mp3", defaultVol: 1.0 },
     { id: "pi",  name: "🎹 キーボード",         file: "Pi.mp3",  defaultVol: 1.0 },
     //{ id: "tp",  name: "🎺トランペット",         file: "Tp.mp3",  defaultVol: 1.0 },
     //{ id: "tb",  name: "📯トロンボーン",         file: "Tb.mp3",  defaultVol: 1.0 },
@@ -83,8 +83,8 @@ const instrumentMaster = [
     //{ id: "vo3", name: "🎤 ボーカル（男性ハモリ）", file: "Vo3.mp3", defaultVol: 1.0 },
 ];
 const DRUM_FILE = "Dr.mp3"; // ドラム音源
-const SONG_TITLE = "<h3>🎵点描の唄🎵</h3>"; // 曲名
-const SONG_BPM = 75; // テンポ
+const SONG_TITLE = "<h3>🎵さくらんぼ🎵</h3>"; // 曲名
+const SONG_BPM = 170; // テンポ
 
 // ==========================================
 // 🚀 システム処理（自動連動）
@@ -274,7 +274,7 @@ async function loadAndParseMidi() {
                     if (note === 48) part = 'tamHi';
                     if (note === 49) part = 'cr1';
                     if (note === 51) part = 'ride';
-                    if (note === 55) part = 'cr2';
+                    if (note === 57) part = 'cr2';
                     if (part) tempEvents.push({ time: time, part: part });
                 }
             });
